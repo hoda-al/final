@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+	--primary: #429b58;
+	--secondary: #bfc0c0;
+	--header-clr: #0D6EFD;
+  --prev-clr: #a7abb3;
+	--next-btn-hover:  #4bc983;
+	--back-btn-hover: #8b8c8c;
+}
+
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url("bg.png"), -webkit-linear-gradient(bottom, #f7f7f7, #f3f3f3);
+}
+::selection{
+  color: #fff;
+  background: var(--primary);
+}
+
+.container{
+  position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container header{
+  font-size: 33px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+.container h2 a{
+  color: #979797;
+  font-size: 17px;
+}
+.container h2 {
+  color: #979797;
+  font-size: 17px;
+}
+
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+
+/*...........................................*/
+form .dbl-field {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.field {
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+  margin-bottom: 30px;
+}
+
+form i {
+  position: absolute;
+  top: 90%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+form .field label {
+  position: absolute;
+  font-size: 1.3rem;
+  direction: rtl;
+}
+
+form .field input,
+form .field select {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 33px;
+}
+.field input:focus:focus{
+  padding-left: 47px;
+  border: 2px solid var(--primary);
+}
+
+
+
+/*.................................................*/
+form .page .field button{
+  width: 35%;
+  height: calc(80% + 5px);
+  border: none;
+  background: var(--primary);
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  margin-top: 30px;
+}
+form .page .field button:hover{
+  background: var(--next-btn-hover);
+}
+
+
+form .page .btns{
+  margin-right: 50px;
+}
+form .page .btns button{
+  margin-top: 30px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  width: 35%;
+  height: 80%;
+  font-size: 15px;
+  background: var(--prev-clr);
+}
+form .page .btns button.prev:hover{
+  background: var(--back-btn-hover);
+}
+form .page .btns button.next{
+  margin-right: 15px;
+  width: 35%;
+  height: 80%;
+}
+
+@media (max-width: 900px) {
+  header {
+     text-align: center;
+ }
+ form {
+     margin: 35px 20px;
+ }
+ form .dbl-field {
+     flex-direction: column;
+     margin-bottom: 0px;
+ }
+ form .dbl-field .field {
+     width: 70%;
+     height: 45px;
+     margin-bottom: 50px;
+ }
+}
+
+@media (max-width: 600px) {
+  header {
+     text-align: center;
+ }
+ form {
+     margin: 35px 20px;
+ }
+ form .dbl-field {
+     flex-direction: column;
+     margin-bottom: 0px;
+ }
+ form .dbl-field .field {
+     width: 80%;
+     height: 45px;
+     margin-bottom: 50px;
+ }
+
+ form .page .field button{
+  width: 45%;
+  height: calc(80% + 5px);
+ }
+
+ 
+form .page .btns button{
+  margin-top: 30px!important;
+  align-items: center;
+}
+form .page .btns button.prev{
+  width: 60%;
+  height: 80%;
+  font-size: 12px;
+}
+form .page .btns button.next{
+  width: 60%;
+  height: 80%;
+  font-size: 12px;
+
+}
+}
+
+
+/*....................part 2.......................*/
+
+form .page .commants h1 {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  margin-right: 30px;
+  color: #c40202;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+form .commants li {
+  color: #030303;
+  text-align: right;
+  font-size: 1.3rem;
+  margin-right: 55px;
+}
+
+form .ducomont{
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0.2s )
+}
+
+form .ducomont label{
+  font-size: 1.3rem;
+}
+
+.drop_box {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #54a10b;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+
+
+form .page h1 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-right: 40px;
+  color: #e60303;
+  margin-right: 24px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  header {
+     text-align: center;
+ }
+ form {
+     margin: 35px 20px;
+ }
+
+ form .commants li {
+  color: #030303;
+  text-align: right;
+  font-size: 1.3rem;
+  margin-right: 55px;
+}
+
+
+ form .page .commants h1 {
+  font-size: 1.5rem;
+  color: #c40202;
+  margin-bottom: 20px;
+}
+
+ form .page h1 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-right: 40px;
+  color: #e60303;
+  margin-right: 24px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+
+ form .page .field button{
+  width: 45%;
+  height: calc(80% + 5px);
+ }
+
+}
+
+@media (max-width: 600px) {
+  header {
+     text-align: center;
+ }
+ form {
+     margin: 35px 20px;
+ }
+
+ form .commants li {
+  color: #030303;
+  text-align: right;
+  font-size: 1.1rem;
+  margin-right: 55px;
+}
+
+
+ form .page .commants h1 {
+  font-size: 1.2rem;
+  color: #c40202;
+  margin-bottom: 20px;
+}
+
+ form .page h1 {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-right: 40px;
+  color: #e60303;
+  margin-right: 24px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+
+ form .page .field button{
+  width: 45%;
+  height: calc(80% + 5px);
+ }
+
+
+}
+
+
+/*..................................part 3.......................................*/
+
+form .field1 {
+  margin-bottom: 20px;
+}
+form .input-field {
+  position: relative;
+  height: 55px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+form .field1 .input-field input:focus:focus{
+  padding-left: 47px;
+  border: 2px solid var(--header-clr);
+}
+
+form .input-field label{
+  font-size: 22px;
+  color: #000000;
+}
+.input-field input {
+  height: 100%;
+  width: 50%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 30px;
+}
+.invalid input {
+  border-color: #d93025;
+}
+
+ .error {
+  display: flex;
+  align-items: center;
+  color: #d93025;
+  font-size: 13px;
+  display: none;
+}
+.invalid .error {
+  display: flex;
+}
+.error .error-icon {
+  margin-right: 6px;
+  font-size: 15px;
+}
+.create-password .error {
+  align-items: flex-start;
+}
+.create-password .error-icon {
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  header {
+     text-align: center;
+ }
+ form {
+     margin: 35px 20px;
+ }
+ form .field1 {
+  margin-right: 30px;
+     flex-direction: column;
+     margin-bottom: 0px;
+ }
+ form .input-field input{
+     width: 80%;
+     height: 45px;
+     margin-bottom: 50px;
+ }
+ form .page .btns button{
+  margin-top: 30px!important;
+  margin-right: 30px;
+}
+form .page .btns button.prev{
+  width: 60%;
+  height: 80%;
+  font-size: 15px;
+
+}
+form .page .btns button.next{
+  width: 60%;
+  height: 80%;
+  font-size: 15px;
+
+
+}
+
+}
+
+
+@media (max-width: 600px) {
+  header {
+     text-align: center;
+ }
+ form {
+     margin: 35px 20px;
+ }
+ form .field1 {
+  margin-right: 20px;
+     flex-direction: column;
+     margin-bottom: 0px;
+ }
+ form .input-field input{
+     width: 70%;
+     height: 45px;
+     margin-bottom: 50px;
+ }
+}
+
+
+
+
+/*...................................................................*/
+
+.container .progress-bar{
+  justify-content: center;
+  display: flex;
+  margin: 50px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  position: relative;
+  padding: 15px;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 35px;
+  width: 35px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #54a10b;
+  background: var(--primary);
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 15px;
+  left: -70px;
+  height: 3px;
+  width: 70px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: var(--primary);
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 68%;
+  font-size: 15px;
+  transform: translate(-40%, -80%);
+  display: none;
+}
+
+.progress-bar .step .check.active{
+  display: block;
+  color: #ffffff;
+}
+
+
+.modal_wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+.modal_wrapper .shadow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	opacity: 0;
+	transition: 0.2s ease;
+}
+
+.modal_wrapper .success_wrap{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-800px);
+	background:#fff;
+	padding: 50px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	transition: 0.5s ease;
+}
+
+.modal_wrapper .success_wrap .modal_icon{
+	margin-left: 20px;
+	width: 50px;
+	height: 50px;
+	background: var(--primary);
+	color: azure;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.modal_wrapper.active{
+	visibility: visible;
+}
+
+.modal_wrapper.active .shadow{
+	opacity: 1;
+}
+
+.modal_wrapper.active .success_wrap{
+	transform: translate(-50%,-50%);
+}
